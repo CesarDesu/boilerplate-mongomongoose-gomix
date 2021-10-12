@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const personSchema = require("./models/personSchema");
+// const personSchema = require("./models/personSchema");
 dotenv.config();
 
 const dbConnection = async () => {

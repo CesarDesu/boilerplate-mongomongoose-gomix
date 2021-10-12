@@ -1,5 +1,6 @@
 // const dotenv = require("dotenv");
 // const mongoose = require("mongoose");
+const personSchema = require("./models/personSchema");
 
 const { dbConnection } = require("./dbConnection");
 
@@ -33,7 +34,7 @@ dbConnection();
 //   }
 // };
 
-let Person;
+let Person = personSchema;
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
