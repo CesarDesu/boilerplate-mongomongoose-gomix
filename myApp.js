@@ -6,37 +6,16 @@ const { dbConnection } = require("./dbConnection");
 
 dbConnection();
 
-// dotenv.config();
-
-// console.log(process.env.MONGO_URI);
-
-// mongoose.connect(process.env.MONGO_URI, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   useCreateIndex: true,
-//   useFindAndModify: false,
-//   autoIndex: true,
-// });
-
-// const addNewAccount = async () => {
-//   try {
-//     const data = {
-//       name: "false Name",
-//       age: 24,
-//       favoriteFoods: ["Te"],
-//     };
-
-//     const account = new Person(data);
-//     await account.save();
-//     console.log("object");
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
 let Person = personSchema;
 
 const createAndSavePerson = (done) => {
+  const data = {
+    name: "false Name",
+    age: 24,
+    favoriteFoods: ["Te"],
+  };
+  const person = Person(data);
+  person.save();
   done(null /*, data*/);
 };
 
