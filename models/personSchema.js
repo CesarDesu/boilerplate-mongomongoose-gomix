@@ -5,9 +5,10 @@ const personSchema = new Schema(
   {
     name: { type: String, require: true },
     age: { type: Number },
-    favoriteFoods: [{ type: String }],
+    favoriteFoods: [String],
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Person", personSchema);
+// module.exports = mongoose.model("Person", personSchema);
+const Person = mongoose.model("Person", personSchema);
