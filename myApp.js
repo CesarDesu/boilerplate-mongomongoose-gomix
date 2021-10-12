@@ -1,17 +1,39 @@
-const dotenv = require("dotenv");
-const mongoose = require("mongoose");
+// const dotenv = require("dotenv");
+// const mongoose = require("mongoose");
 
-dotenv.config();
+const { dbConnection } = require("./dbConnection");
 
-console.log(process.env.MONGO_URI);
+dbConnection();
 
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-  autoIndex: true,
-});
+// dotenv.config();
+
+// console.log(process.env.MONGO_URI);
+
+// mongoose.connect(process.env.MONGO_URI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useCreateIndex: true,
+//   useFindAndModify: false,
+//   autoIndex: true,
+// });
+
+// const addNewAccount = async () => {
+//   try {
+//     const data = {
+//       name: "false Name",
+//       age: 24,
+//       favoriteFoods: ["Te"],
+//     };
+
+//     const account = new Person(data);
+//     await account.save();
+//     console.log("object");
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// addNewAccount();
 
 let Person;
 
