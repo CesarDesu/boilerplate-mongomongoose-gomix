@@ -33,8 +33,6 @@ dbConnection();
 //   }
 // };
 
-// addNewAccount();
-
 let Person;
 
 const createAndSavePerson = (done) => {

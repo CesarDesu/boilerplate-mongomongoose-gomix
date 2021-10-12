@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const personSchema = require("./models/personSchema");
 dotenv.config();
 
 const dbConnection = async () => {
@@ -7,9 +8,9 @@ const dbConnection = async () => {
     await mongoose.connect(`${process.env.MONGO_URI}`, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false,
-      autoIndex: false,
+      // useCreateIndex: true,
+      // useFindAndModify: false,
+      // autoIndex: false,
     });
     console.log("database connection successful");
     // const data = {
@@ -18,9 +19,11 @@ const dbConnection = async () => {
     //   favoriteFoods: ["Te"],
     // };
 
+    // personSchema.create(data);
+
     // const account = new Person(data);
     // await account.save();
-    // console.log(account);
+    console.log("account");
   } catch (error) {
     console.log(error);
     throw new Error("database connection error");
