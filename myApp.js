@@ -73,9 +73,7 @@ const findEditThenSave = (personId, done) => {
   Person.findByIdAndUpdate(
     { _id: personId },
     {
-      $push: {
-        foodToAdd,
-      },
+      $push: foodToAdd,
     },
     function (err, data) {
       if (err) return console.log(err);
